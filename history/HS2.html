@@ -1,186 +1,539 @@
-<!DOCTYPE html>
+       <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
-    <title>UPSC CSE Prelims 2025 - History Questions & Explanations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>इतिहास प्रश्न एवं उत्तर - UPSC CSE 2025</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 20px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
-            background-color: #f4f6f9;
-            color: #2c3e50;
         }
-        .main-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: #ffffff;
-            border: 3px solid #1a365d;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333333;
+            line-height: 1.6;
+            padding: 12px;
+            font-size: 15px;
         }
-        .header-container {
+        .header {
+            text-align: center;
             background-color: #1a365d;
             color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            border-radius: 5px;
-            border-bottom: 4px solid #c59b27;
-            margin-bottom: 20px;
+            padding: 16px 12px;
+            border-radius: 8px;
+            margin-bottom: 16px;
         }
-        .header-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin: 0;
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
-        .header-subtitle {
-            font-size: 14px;
-            margin-top: 8px;
-            color: #e2e8f0;
+        .header p {
+            font-size: 13px;
+            opacity: 0.9;
         }
-        .meta-badge {
-            display: inline-block;
-            background-color: #c59b27;
-            color: #1a365d;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 12px;
-            margin-top: 10px;
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
         }
-        .intro-box {
-            background-color: #ebf8ff;
-            border-left: 5px solid #3182ce;
-            padding: 12px 15px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            border-radius: 4px;
-        }
-        .question-card {
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            background-color: #ffffff;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .question-header {
-            background-color: #f8fafc;
-            padding: 10px 15px;
-            border-bottom: 1px solid #e2e8f0;
-            font-weight: bold;
+        .q-header {
             display: flex;
-            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
-        .q-num {
-            color: #c59b27;
+        .q-number {
+            background-color: #2b6cb0;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+            padding: 2px 8px;
+            border-radius: 12px;
+            margin-right: 8px;
+        }
+        .q-title {
+            font-weight: bold;
+            color: #2d3748;
             font-size: 16px;
         }
-        .q-topic {
-            color: #64748b;
-            font-size: 13px;
-        }
-        .question-body {
-            padding: 15px;
-        }
-        .question-text {
-            font-size: 15px;
-            font-weight: bold;
+        .q-text {
             margin-bottom: 12px;
-            color: #0f172a;
+            color: #1a202c;
         }
-        .options-list {
-            margin: 10px 0;
+        .q-text ul {
+            list-style-type: none;
             padding-left: 0;
-            list-style: none;
+            margin: 8px 0;
         }
-        .option-item {
+        .q-text ul li {
+            margin-bottom: 4px;
+            padding-left: 4px;
+        }
+        .options {
+            margin-bottom: 12px;
+        }
+        .option {
             padding: 8px 12px;
-            margin-bottom: 6px;
-            border-radius: 4px;
+            border-radius: 6px;
             background-color: #f8fafc;
-            border: 1px solid #e2e8f0;
+            border: 1px solid #edf2f7;
+            margin-bottom: 6px;
             font-size: 14px;
         }
-        .option-item.correct {
-            background-color: #f0fdf4;
-            border-color: #86efac;
-            color: #166534;
-            font-weight: bold;
+        .option.correct {
+            background-color: #c6f6d5;
+            border-color: #38a169;
+            color: #22543d;
+            font-weight: 600;
         }
-        .explanation-box {
-            background-color: #f8fafc;
-            border-top: 1px dashed #cbd5e1;
-            padding: 12px 15px;
+        .answer-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 10px 12px;
+            border-radius: 0 6px 6px 0;
+            margin-top: 10px;
+        }
+        .answer-title {
+            font-weight: bold;
+            color: #2b6cb0;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+        .explanation {
+            font-size: 13.5px;
+            color: #2d3748;
+        }
+        .table-custom {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 8px 0;
             font-size: 13.5px;
         }
-        .exp-title {
-            font-weight: bold;
-            color: #1a365d;
-            margin-bottom: 6px;
+        .table-custom th, .table-custom td {
+            border: 1px solid #cbd5e0;
+            padding: 6px 8px;
+            text-align: left;
         }
-        .exp-content {
-            color: #334155;
-            line-height: 1.5;
-        }
-        .pattern-note {
-            margin-top: 8px;
-            padding: 6px 10px;
-            background-color: #fffbeb;
-            border: 1px solid #fef3c7;
-            border-radius: 4px;
-            color: #92400e;
-            font-size: 12.5px;
+        .table-custom th {
+            background-color: #f7fafc;
         }
     </style>
 </head>
 <body>
 
-<div class="main-container">
-    <div class="header-container">
-        <h1 class="header-title">UPSC CSE PRELIMS 2025</h1>
-        <div class="header-subtitle">इतिहास एवं कला-संस्कृति (History & Art/Culture) - प्रश्न, उत्तर एवं व्याख्या</div>
-        <div class="meta-badge">GS Paper - 1 Analysis</div>
+    <div class="header">
+        <h1>UPSC CSE 2025 - इतिहास के प्रश्न</h1>
+        <p>सामान्य अध्ययन (प्रश्न-पत्र I) | उत्तर एवं विस्तृत व्याख्या</p>
     </div>
 
-    <div class="intro-box">
-        <strong>UPSC Pattern Analysis:</strong> इतिहास के प्रश्नों में तथ्यात्मक जानकारी (Facts) के साथ-साथ 'Cause and Effect' (कारण और प्रभाव), शब्दावली (Terminologies) और 'कितने युग्म सही हैं' जैसे विकल्पों का अधिक प्रयोग किया गया है।
+    <!-- Question 11 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 11</span>
+            <span class="q-title">राजा राममोहन राय</span>
+        </div>
+        <div class="q-text">
+            राजा राममोहन राय के बारे में, निम्नलिखित कथनों पर विचार कीजिए[span_0](start_span)[span_0](end_span):
+            <ul>
+                <li>I. उनमें प्राच्य विश्व के पारम्परिक दार्शनिक सिद्धांतों के प्रति अत्यंत अनुराग और समादर था।[span_1](start_span)[span_1](end_span)</li>
+                <li>II. उनकी कामना थी कि उनके देशवासी तर्कसंगत और वैज्ञानिक दृष्टिकोण तथा सभी पुरुषों और महिलाओं की मानवीय गरिमा और सामाजिक समता के सिद्धांत को मानें।[span_2](start_span)[span_2](end_span)</li>
+            </ul>
+            उपर्युक्त कथनों में से कौन-सा/कौन-से सही है/हैं?[span_3](start_span)[span_3](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) केवल I[span_4](start_span)[span_4](end_span)</div>
+            <div class="option">(b) केवल II[span_5](start_span)[span_5](end_span)</div>
+            <div class="option correct">(c) I और II दोनों[span_6](start_span)[span_6](end_span)</div>
+            <div class="option">(d) न तो I और न ही II[span_7](start_span)[span_7](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) I और II दोनों[span_8](start_span)[span_8](end_span)</div>
+            <div class="explanation">
+                राजा राममोहन राय भारतीय पुनर्जागरण के पिता माने जाते हैं। वे पूर्वी उपनिषदों और वेदांत दर्शन के प्रति गहरा सम्मान रखते थे (कथन I सही)। साथ ही, उन्होंने भारतीय समाज में आधुनिकता, तर्कसंगतता, वैज्ञानिक दृष्टिकोण और महिलाओं के अधिकारों तथा समानता की पुरजोर वकालत की (कथन II सही)।
+            </div>
+        </div>
     </div>
 
-    <!-- Example Question Card -->
-    <div class="question-card">
-        <div class="question-header">
-            <span class="q-num">प्रश्न 11</span>
-            <span class="q-topic">आधुनिक भारत - सामाजिक-धार्मिक सुधार</span>
+    <!-- Question 12 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 12</span>
+            <span class="q-title">असहयोग कार्यक्रम</span>
         </div>
-        <div class="question-body">
-            <div class="question-text">राजा राममोहन राय के संदर्भ में, निम्नलिखित कथनों पर विचार कीजिए:</div>
-            <ol>
-                <li>उन्होंने 'एकेश्वरवादियों को उपहार' (Gift to Monotheists) की भूमिका संस्कृत में लिखी थी।</li>
-                <li>उन्होंने डेविड हेयर के साथ मिलकर कलकत्ता में हिंदू कॉलेज की स्थापना की।</li>
-            </ol>
-            <p><strong>उपर्युक्त कथनों में से कौन-सा/से सही है/हैं?</strong></p>
-            <div class="options-list">
-                <div class="option-item">(a) केवल 1</div>
-                <div class="option-item correct">(b) केवल 2 ✓ (सही उत्तर)</div>
-                <div class="option-item">(c) 1 और 2 दोनों</div>
-                <div class="option-item">(d) न तो 1, न ही 2</div>
-            </div>
+        <div class="q-text">
+            असहयोग कार्यक्रम के बारे में, निम्नलिखित विषयों पर विचार कीजिए[span_9](start_span)[span_9](end_span):
+            <ul>
+                <li>I. न्यायालयों और विदेशी वस्त्र का बहिष्कार[span_10](start_span)[span_10](end_span)</li>
+                <li>II. अहिंसा का कठोर अनुपालन[span_11](start_span)[span_11](end_span)</li>
+                <li>III. उपाधियों और सम्मानों का, उनका सार्वजनिक उपयोग न करते हुए, प्रतिधारण[span_12](start_span)[span_12](end_span)</li>
+                <li>IV. विवादों के निपटारे के लिए पंचायतों की स्थापना[span_13](start_span)[span_13](end_span)</li>
+            </ul>
+            उपर्युक्त में से कितने असहयोग कार्यक्रम के अवयव हैं?[span_14](start_span)[span_14](end_span)
         </div>
-        <div class="explanation-box">
-            <div class="exp-title">विस्तृत व्याख्या:</div>
-            <div class="exp-content">
-                • <strong>कथन 1 गलत है:</strong> राजा राममोहन राय ने अपनी प्रसिद्ध पुस्तक 'तुहफत-उल-मुवाहहिदीन' (Gift to Monotheists) 1809 में <em>फारसी भाषा</em> में लिखी थी और इसकी भूमिका अरबी में थी।<br>
-                • <strong>कथन 2 सही है:</strong> 1817 में उन्होंने डेविड हेयर के साथ मिलकर कलकत्ता में हिंदू कॉलेज की स्थापना की थी।
-            </div>
-            <div class="pattern-note">
-                <strong>UPSC पैटर्न सीख:</strong> सुधारकों की रचनाओं की भाषाओं और उनके सहयोगियों के नाम पर सूक्ष्म सवाल पूछे जाते हैं।
+        <div class="options">
+            <div class="option">(a) केवल एक[span_15](start_span)[span_15](end_span)</div>
+            <div class="option">(b) केवल दो[span_16](start_span)[span_16](end_span)</div>
+            <div class="option correct">(c) केवल तीन[span_17](start_span)[span_17](end_span)</div>
+            <div class="option">(d) सभी चार[span_18](start_span)[span_18](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) केवल तीन[span_19](start_span)[span_19](end_span)</div>
+            <div class="explanation">
+                असहयोग आंदोलन में न्यायालयों/विदेशी वस्त्रों का बहिष्कार (I), अहिंसा का पालन (II), और विवादों हेतु पंचायतों की स्थापना (IV) शामिल थे। परंतु सरकारी उपाधियों और सम्मानों को "प्रतिधारित (पास में रखना)" नहीं, बल्कि "त्यागना (surrender)" असहयोग का मूल हिस्सा था। अतः केवल 3 अवयव सही हैं।
             </div>
         </div>
     </div>
-    <!-- Additional questions are formatted similarly in the full generated document -->
-</div>
+
+    <!-- Question 13 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 13</span>
+            <span class="q-title">अरघट्टा (Araghatta)</span>
+        </div>
+        <div class="q-text">
+            सिंचाई में काम आने वाला 'अरघट्टा' नामक उपकरण क्या था?[span_20](start_span)[span_20](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) एक घिरनी (पुली) से खींचा जाने वाला चमड़े का बना पानी का थैला[span_21](start_span)[span_21](end_span)</div>
+            <div class="option correct">(b) एक बड़ा चक्का, जिसकी अराओं (स्पोक्स) के बाहरी छोरों पर मिट्टी के पात्र बँधे हों[span_22](start_span)[span_22](end_span)</div>
+            <div class="option">(c) बैलों के द्वारा खींचा जाने वाला मिट्टी का एक अधिक बड़ा पात्र[span_23](start_span)[span_23](end_span)</div>
+            <div class="option">(d) सीधे हाथों से ही रस्सी द्वारा खींचा जाने वाला बड़ा जल-डोल[span_24](start_span)[span_24](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b)[span_25](start_span)[span_25](end_span)</div>
+            <div class="explanation">
+                'अरघट्टा' (Araghatta) प्राचीन और मध्यकालीन भारत में प्रयुक्त एक जल-चक्र (Persian wheel का प्राचीन रूप) था, जिसमें एक बड़े पहिए के बाहरी किनारों पर मिट्टी के पात्र (बर्तन) लगे होते थे जो कुएँ से पानी निकालने का काम करते थे।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 14</span>
+            <span class="q-title">पल्लव शासक एवं उनकी उपाधियाँ</span>
+        </div>
+        <div class="q-text">
+            प्राचीन भारत में इनमें से किस शासक ने 'मत्तविलास', 'विचित्रचित्त' और 'गुणभरा' उपाधियाँ धारण की थीं?[span_26](start_span)[span_26](end_span)
+        </div>
+        <div class="options">
+            <div class="option correct">(a) महेन्द्रवर्मन प्रथम[span_27](start_span)[span_27](end_span)</div>
+            <div class="option">(b) सिंहविष्णु[span_28](start_span)[span_28](end_span)</div>
+            <div class="option">(c) नरसिंहवर्मन प्रथम[span_29](start_span)[span_29](end_span)</div>
+            <div class="option">(d) सिंहवर्मन[span_30](start_span)[span_30](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (a) महेन्द्रवर्मन प्रथम[span_31](start_span)[span_31](end_span)</div>
+            <div class="explanation">
+                पल्लव राजा महेन्द्रवर्मन प्रथम (600–630 ईस्वी) एक महान साहित्यकार और कलाप्रेमी शासक थे। उन्होंने प्रसिद्ध प्रहसन 'मत्तविलास प्रहसन' की रचना की और 'मत्तविलास', 'विचित्रचित्त' (अभिनव विचार वाला), तथा 'गुणभरा' जैसी उपाधियाँ धारण की थीं।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 15</span>
+            <span class="q-title">फाह्यान की भारत यात्रा</span>
+        </div>
+        <div class="q-text">
+            चीनी तीर्थयात्री फाह्यान ने इनमें से किसके शासनकाल में भारत की यात्रा की थी?[span_32](start_span)[span_32](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) समुद्रगुप्त[span_33](start_span)[span_33](end_span)</div>
+            <div class="option correct">(b) चन्द्रगुप्त द्वितीय[span_34](start_span)[span_34](end_span)</div>
+            <div class="option">(c) कुमारगुप्त प्रथम[span_35](start_span)[span_35](end_span)</div>
+            <div class="option">(d) स्कंदगुप्त[span_36](start_span)[span_36](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b) चन्द्रगुप्त द्वितीय[span_37](start_span)[span_37](end_span)</div>
+            <div class="explanation">
+                चीनी बौद्ध भिक्षु फाह्यान (Faxian) गुप्त राजवंश के महान शासक चन्द्रगुप्त द्वितीय 'विक्रमादित्य' के शासनकाल (399-414 ईस्वी के दौरान) में बौद्ध धर्मग्रंथों की खोज में भारत आया था।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 16</span>
+            <span class="q-title">श्रीविजय साम्राज्य के विरुद्ध सैन्य अभियान</span>
+        </div>
+        <div class="q-text">
+            इनमें से किसने शक्तिशाली समुद्रवर्ती राज्य श्रीविजय के विरुद्ध, जिसका शासन मलय प्रायद्वीप, सुमात्रा, जावा और निकटवर्ती द्वीपों पर था, एक सफल सैन्य अभियान का नेतृत्व किया था?[span_38](start_span)[span_38](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) अमोघवर्ष (राष्ट्रकूट)[span_39](start_span)[span_39](end_span)</div>
+            <div class="option">(b) प्रतापरुद्र (काकतीय)[span_40](start_span)[span_40](end_span)</div>
+            <div class="option correct">(c) राजेन्द्र प्रथम (चोल)[span_41](start_span)[span_41](end_span)</div>
+            <div class="option">(d) विष्णुवर्धन (होयसल)[span_42](start_span)[span_42](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) राजेन्द्र प्रथम (चोल)[span_43](start_span)[span_43](end_span)</div>
+            <div class="explanation">
+                चोल सम्राट राजेन्द्र प्रथम ने 1025 ईस्वी में दक्षिण-पूर्व एशिया में दक्षिण-पूर्वी समुद्री मार्ग पर अपना वर्चस्व स्थापित करने के लिए शक्तिशाली नौसेना भेजी और श्रीविजय साम्राज्य (सुमात्रा, जावा, मलय प्रायद्वीप) पर विजय प्राप्त की।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 17</span>
+            <span class="q-title">प्राचीन महाजनपद एवं नदियाँ</span>
+        </div>
+        <div class="q-text">
+            प्राचीन भारत (600-322 ईसा पूर्व) के संदर्भ में, निम्नलिखित युग्मों पर विचार कीजिए[span_44](start_span)[span_44](end_span):
+            <table class="table-custom">
+                <tr><th>प्रादेशिक क्षेत्र</th><th>नदी</th></tr>
+                <tr><td>I. अश्मक</td><td>गोदावरी</td></tr>
+                <tr><td>II. कम्बोज</td><td>विपास</td></tr>
+                <tr><td>III. अवन्ती</td><td>महानदी</td></tr>
+                <tr><td>IV. कोसल</td><td>सरयू</td></tr>
+            </table>
+            उपर्युक्त में से कितने युग्म सही सुमेलित हैं?[span_45](start_span)[span_45](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) केवल एक[span_46](start_span)[span_46](end_span)</div>
+            <div class="option correct">(b) केवल दो[span_47](start_span)[span_47](end_span)</div>
+            <div class="option">(c) केवल तीन[span_48](start_span)[span_48](end_span)</div>
+            <div class="option">(d) सभी चार[span_49](start_span)[span_49](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b) केवल दो[span_50](start_span)[span_50](end_span)</div>
+            <div class="explanation">
+                1. <strong>अश्मक:</strong> गोदावरी नदी के तट पर स्थित था (सही)[span_51](start_span)[span_51](end_span)।<br>
+                2. <strong>कम्बोज:</strong> उत्तर-पश्चिम (हिन्दुकुश क्षेत्र) में था, विपास (व्यास नदी) में नहीं (गलत)[span_52](start_span)[span_52](end_span)।<br>
+                3. <strong>अवन्ती:</strong> क्षिप्रा/वेत्रवती (मालवा क्षेत्र) से संबंधित है, महानदी से नहीं (गलत)[span_53](start_span)[span_53](end_span)।<br>
+                4. <strong>कोसल:</strong> सरयू नदी के तट पर (अयोध्या क्षेत्र) स्थित था (सही)[span_54](start_span)[span_54](end_span)।<br>
+                अतः 2 युग्म सही हैं।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 18</span>
+            <span class="q-title">गन्धर्व महाविद्यालय</span>
+        </div>
+        <div class="q-text">
+            प्रथम गन्धर्व महाविद्यालय, जो एक संगीत प्रशिक्षण विद्यालय था, विष्णु दिगंबर पलुस्कर द्वारा 1901 में कहाँ स्थापित किया गया था?[span_55](start_span)[span_55](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) दिल्ली[span_56](start_span)[span_56](end_span)</div>
+            <div class="option">(b) ग्वालियर[span_57](start_span)[span_57](end_span)</div>
+            <div class="option">(c) उज्जैन[span_58](start_span)[span_58](end_span)</div>
+            <div class="option correct">(d) लाहौर[span_59](start_span)[span_59](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (d) लाहौर[span_60](start_span)[span_60](end_span)</div>
+            <div class="explanation">
+                पं. विष्णु दिगंबर पलुस्कर ने 5 मई 1901 को लाहौर (अब पाकिस्तान में) में पहला गन्धर्व महाविद्यालय स्थापित किया था। बाद में इसे मुंबई स्थानांतरित कर दिया गया था।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 19</span>
+            <span class="q-title">मौर्यकालीन अधिकारी</span>
+        </div>
+        <div class="q-text">
+            जैसा कि अशोक के अभिलेखों से ज्ञात होता है, 'प्रादेशिक', 'राजुक' और 'युक्त' किस स्तर पर महत्त्वपूर्ण अधिकारी थे?[span_61](start_span)[span_61](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) ग्राम-स्तरीय प्रशासन[span_62](start_span)[span_62](end_span)</div>
+            <div class="option correct">(b) जिला-स्तरीय प्रशासन[span_63](start_span)[span_63](end_span)</div>
+            <div class="option">(c) प्रांतीय प्रशासन[span_64](start_span)[span_64](end_span)</div>
+            <div class="option">(d) केन्द्रीय प्रशासन स्तर[span_65](start_span)[span_65](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b) जिला-स्तरीय प्रशासन[span_66](start_span)[span_66](end_span)</div>
+            <div class="explanation">
+                अशोक के तीसरे शिलालेख में 'प्रादेशिक' (मंडल प्रमुख/राजस्व अधिकारी), 'राजुक' (न्यायिक व भू-राजस्व अधिकारी), और 'युक्त' (अधीनस्थ सचिव/लेखाकार) का उल्लेख मिलता है, जो मुख्य रूप से अहार/विषय (ज़िला) स्तर के प्रशासनिक अधिकारी थे।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 20</span>
+            <span class="q-title">असहयोग आंदोलन की शर्तें</span>
+        </div>
+        <div class="q-text">
+            असहयोग आंदोलन के संबंध में, निम्नलिखित कथनों पर विचार कीजिए[span_67](start_span)[span_67](end_span):
+            <ul>
+                <li>I. काँग्रेस ने घोषणा की कि सभी वैध और शांतिपूर्ण तरीकों से 'स्वराज' प्राप्त करना उसका उद्देश्य है।[span_68](start_span)[span_68](end_span)</li>
+                <li>II. इसे चरणों में कार्यान्वित किया जाना था, जिसमें सविनय अवज्ञा और करों का भुगतान न करना अगले चरण के लिए थे, केवल तब, जब 'स्वराज' एक वर्ष में प्राप्त न होता और सरकार दमन पर उतर आती।[span_69](start_span)[span_69](end_span)</li>
+            </ul>
+            उपर्युक्त कथनों में से कौन-सा/कौन-से सही है/हैं?[span_70](start_span)[span_70](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) केवल I[span_71](start_span)[span_71](end_span)</div>
+            <div class="option">(b) केवल II[span_72](start_span)[span_72](end_span)</div>
+            <div class="option correct">(c) I और II दोनों[span_73](start_span)[span_73](end_span)</div>
+            <div class="option">(d) न तो I और न ही II[span_74](start_span)[span_74](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) I और II दोनों[span_75](start_span)[span_75](end_span)</div>
+            <div class="explanation">
+                नागपुर अधिवेशन (1920) में कांग्रेस ने अपने संविधान में बदलाव कर शांतिपूर्ण व उचित साधनों द्वारा 'स्वराज' प्राप्त करने का लक्ष्य तय किया (कथन I सही)। गांधीजी ने योजना बनाई थी कि यदि एक वर्ष में स्वराज न मिले या सरकार दमन करे तो सविनय अवज्ञा व कर-बंदी लागू की जाएगी (कथन II सही)।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 71 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 71</span>
+            <span class="q-title">गाँधीजी का प्रसिद्ध वक्तव्य</span>
+        </div>
+        <div class="q-text">
+            गाँधीजी ने विख्यात वक्तव्य "राजद्रोह मेरा धर्म हो गया है" (Sedition has become my religion) कब दिया था?[span_76](start_span)[span_76](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) चंपारण सत्याग्रह के समय[span_77](start_span)[span_77](end_span)</div>
+            <div class="option correct">(b) दांडी में नमक कानून का सार्वजनिक रूप से उल्लंघन करने के समय[span_78](start_span)[span_78](end_span)</div>
+            <div class="option">(c) लंदन में द्वितीय गोलमेज सम्मेलन में शामिल होने के समय[span_79](start_span)[span_79](end_span)</div>
+            <div class="option">(d) भारत छोड़ो आंदोलन के प्रारंभ के समय[span_80](start_span)[span_80](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b)[span_81](start_span)[span_81](end_span)</div>
+            <div class="explanation">
+                गांधीजी ने 5 अप्रैल 1930 को दांडी पहुँचने पर और 6 अप्रैल को नमक कानून तोड़ने से ठीक पूर्व अपने भाषण में कहा था कि ब्रिटिश शासन के अधीन "राजद्रोह मेरा धर्म बन गया है" (Sedition has become my religion)।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 72 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 72</span>
+            <span class="q-title">मोहनजोदड़ो की नृत्यकी (Dancing Girl)</span>
+        </div>
+        <div class="q-text">
+            मोहनजोदड़ो से प्राप्त 'नाचती हुई लड़की (डांसिंग गर्ल)' नामक प्रख्यात नारी लघुमूर्ति किस पदार्थ की बनी है?[span_82](start_span)[span_82](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) इन्द्रगोप मणि (कार्नीलियन)[span_83](start_span)[span_83](end_span)</div>
+            <div class="option">(b) मृत्तिका (क्ले)[span_84](start_span)[span_84](end_span)</div>
+            <div class="option correct">(c) कांस्य (Bronze)[span_85](start_span)[span_85](end_span)</div>
+            <div class="option">(d) स्वर्ण[span_86](start_span)[span_86](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) कांस्य[span_87](start_span)[span_87](end_span)</div>
+            <div class="explanation">
+                सिंधु घाटी सभ्यता के स्थल मोहनजोदड़ो से प्राप्त प्रसिद्ध 'डांसिंग गर्ल' की मूर्ति कांस्य (Bronze) धातु की 'लुप्त मोम तकनीक' (Lost-Wax Technique) द्वारा बनाई गई है।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 73 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 73</span>
+            <span class="q-title">चौरी-चौरा घटना और विधिक प्रतिरक्षा</span>
+        </div>
+        <div class="q-text">
+            चौरी-चौरा घटना के परिणामस्वरूप बंदी बनाए गए लोगों को किसने विधिक प्रतिरक्षा (लीगल डिफेन्स) प्रदान की?[span_88](start_span)[span_88](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) सी० आर० दास[span_89](start_span)[span_89](end_span)</div>
+            <div class="option correct">(b) मदन मोहन मालवीय और कृष्णकांत[span_90](start_span)[span_90](end_span)</div>
+            <div class="option">(c) डॉ० सैफुद्दीन किचलू और ख्वाज़ा हसन निज़ामी[span_91](start_span)[span_91](end_span)</div>
+            <div class="option">(d) एम० ए० जिन्ना[span_92](start_span)[span_92](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (b) मदन मोहन मालवीय और कृष्णकांत[span_93](start_span)[span_93](end_span)</div>
+            <div class="explanation">
+                1922 की चौरी-चौरा घटना के बाद गिरफ्तार किए गए 220 से अधिक अभियुक्तों की अदालत में पैरवी पंडित मदन मोहन मालवीय जी ने प्रमुखता से की थी और उन्होंने 150 से अधिक लोगों की मृत्युदंड की सजा माफ कराई थी।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 74 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 74</span>
+            <span class="q-title">गाँधीजी और 'हरिजन' उत्थान</span>
+        </div>
+        <div class="q-text">
+            निम्नलिखित में से किस एक घटना के उपरांत, गाँधीजी ने अपने राजनीतिक और सामाजिक कार्यक्रम में 'हरिजनों' के उत्थान को शामिल करने का निश्चय किया?[span_94](start_span)[span_94](end_span)
+        </div>
+        <div class="options">
+            <div class="option correct">(a) पूना समझौता[span_95](start_span)[span_95](end_span)</div>
+            <div class="option">(b) गाँधी-इरविन समझौता (दिल्ली समझौता)[span_96](start_span)[span_96](end_span)</div>
+            <div class="option">(c) भारत छोड़ो आंदोलन के समय काँग्रेस के नेताओं की गिरफ्तारी[span_97](start_span)[span_97](end_span)</div>
+            <div class="option">(d) भारत सरकार अधिनियम, 1935 की प्रख्यापना[span_98](start_span)[span_98](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (a) पूना समझौता[span_99](start_span)[span_99](end_span)</div>
+            <div class="explanation">
+                सितंबर 1932 में बी. आर. अम्बेडकर और गांधीजी के बीच हुए 'पूना पैक्ट' के बाद गांधीजी ने अपना मुख्य ध्यान अस्पृश्यता निवारण और दलितों के सामाजिक उत्थान पर केंद्रित किया। उन्होंने 'ऑल इंडिया एंटी-अनटचेबिलिटी लीग' बनाई तथा 'हरिजन' पत्रिका शुरू की।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 75 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 75</span>
+            <span class="q-title">पुर्तगालियों द्वारा भारत लाए गए फल</span>
+        </div>
+        <div class="q-text">
+            निम्नलिखित फलों पर विचार कीजिए[span_100](start_span)[span_100](end_span):
+            <ul>
+                <li>I. पपीता[span_101](start_span)[span_101](end_span)</li>
+                <li>II. अनन्नास[span_102](start_span)[span_102](end_span)</li>
+                <li>III. अमरूद[span_103](start_span)[span_103](end_span)</li>
+            </ul>
+            उपर्युक्त में से कितने सोलहवीं और सत्रहवीं शताब्दियों में पुर्तगालियों द्वारा भारत में लाए गए?[span_104](start_span)[span_104](end_span)
+        </div>
+        <div class="options">
+            <div class="option">(a) केवल एक[span_105](start_span)[span_105](end_span)</div>
+            <div class="option">(b) केवल दो[span_106](start_span)[span_106](end_span)</div>
+            <div class="option correct">(c) सभी तीन[span_107](start_span)[span_107](end_span)</div>
+            <div class="option">(d) कोई भी नहीं[span_108](start_span)[span_108](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (c) सभी तीन[span_109](start_span)[span_109](end_span)</div>
+            <div class="explanation">
+                पुर्तगाली 16वीं और 17वीं शताब्दी में अमेरिका महाद्वीप से कई नई फसलें और फल भारत लाए थे, जिनमें पपीता, अनन्नास, अमरूद, काजू, तंबाकू और लाल मिर्च प्रमुख हैं।
+            </div>
+        </div>
+    </div>
+
+    <!-- Question 78 -->
+    <div class="card">
+        <div class="q-header">
+            <span class="q-number">प्रश्न 78</span>
+            <span class="q-title">आत्म-सम्मान आंदोलन (Self-Respect Movement)</span>
+        </div>
+        <div class="q-text">
+            इनमें से कौन 'आत्म-सम्मान आंदोलन (सेल्फ-रेस्पेक्ट मूवमेंट)' का संस्थापक था?[span_110](start_span)[span_110](end_span)
+        </div>
+        <div class="options">
+            <div class="option correct">(a) 'पेरियार' ई० वी० रामास्वामी नायकर[span_111](start_span)[span_111](end_span)</div>
+            <div class="option">(b) डॉ० बी० आर० अम्बेडकर[span_112](start_span)[span_112](end_span)</div>
+            <div class="option">(c) भास्करराव जाधव[span_113](start_span)[span_113](end_span)</div>
+            <div class="option">(d) दिनकरराव जवलकर[span_114](start_span)[span_114](end_span)</div>
+        </div>
+        <div class="answer-box">
+            <div class="answer-title">सही उत्तर: (a) 'पेरियार' ई० वी० रामास्वामी नायकर[span_115](start_span)[span_115](end_span)</div>
+            <div class="explanation">
+                ई. वी. रामास्वामी नायकर 'पेरियार' ने वर्ष 1925 में तमिलनाडु में 'आत्म-सम्मान आंदोलन' की शुरुआत की थी। इस आंदोलन का मुख्य उद्देश्य गैर-ब्राह्मणों को समाज में समानता और आत्म-सम्मान दिलाना था।
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
